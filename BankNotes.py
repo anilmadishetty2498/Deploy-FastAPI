@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 class BankNote(BaseModel):
      variance: float
-     skewneww: float
+     skewness: float
      curtosis: float
      entropy: float
 

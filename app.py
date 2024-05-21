@@ -1,6 +1,6 @@
 #1. import libraries
 
-import uvicorn  #ASGI
+import uvicorn
 from fastapi import FastAPI
 from BankNotes import BankNote
 import numpy as np
@@ -8,11 +8,13 @@ import pickle
 import pandas as pd
 
 
-# 2. Create the app object
+# 2. Create the app object  
 app = FastAPI()
 #import model
-#pickle_in = open("rf_model_bknote.0.1.pkl","rb")
-classifier = pickle.load(open("rf_model_bknote.0.1.pkl","rb"))
+classifier = pickle.load(open('new_model.pkl', 'rb'))
+
+with open('classifier.pkl', 'rb') as f:
+    classifier = pickle.load(f)
 
 # 3. Index route, opens automatically on http://127.0.0.1:8000
 @app.get('/')
@@ -52,3 +54,4 @@ if __name__ == '__main__':
 
 #pip install fastapi uvicorn
 #uvicorn main:app --reload
+#uvicorn app:app --reload
