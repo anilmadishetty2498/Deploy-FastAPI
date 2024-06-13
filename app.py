@@ -1,3 +1,4 @@
+# Databricks notebook source
 #1. import libraries
 
 import uvicorn
@@ -54,4 +55,5 @@ if __name__ == '__main__':
 
 #pip install fastapi uvicorn
 #uvicorn main:app --reload
+#uvicorn app:app --reload
 #uvicorn app:app --reload
