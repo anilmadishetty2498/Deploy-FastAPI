@@ -7,4 +7,3 @@ fastapi
 uvicorn
 gunicorn==19.9.0
 httptools
-pickle
